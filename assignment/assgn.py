@@ -3,6 +3,7 @@ import pandas as pd
 import datetime as dt
 from dateutil.relativedelta import relativedelta
 from datetime import date
+import python_mail
 
 data= pd.read_excel(r"C:\Users\nupur\Desktop\SampleData.xlsx")
 
@@ -43,4 +44,4 @@ def construct_emailbody():
     """
     return emailbody
 
-    
+python_mail.Send_mail(construct_emailbody(), 'tomar.nupur01@gmail.com, aakash.g@motivitylabs.com, shiva.m@motivitylabs.com')
